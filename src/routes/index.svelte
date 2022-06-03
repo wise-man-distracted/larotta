@@ -1,14 +1,19 @@
 <script>
-console.log("Hello coming from index.svelte")
+import { allCards } from "../stores/allCardsStore";
+console.log($allCards);
 </script>
 
 <svelte:head>
-<title>Larotta - Tarô Online</title>
+<title>Larotta - Online Tarot</title>
 </svelte:head>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
+<section class="flex flex-wrap gap-5">
+    {#each $allCards as card}
+        <div class="">
+            <p>{card.name}</p>
+            <img src="{card.img}" alt="" class="w-20">
+        </div>
+    {/each}
+</section>
 <style>
 * {
     font-family: Roboto, "Noto Sans";

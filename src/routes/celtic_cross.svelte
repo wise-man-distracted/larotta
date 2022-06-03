@@ -1,13 +1,20 @@
 <script>
-
+import { someCards } from "../stores/someCardsStore";
+console.log($someCards)
 </script>
 
 <svelte:head>
 <title>Larotta - Cruz Celta</title>
 </svelte:head>
 
-<h1>Cruz Celta</h1>
-<p>Eu sou a página de cruz celta</p>
+<section class="flex flex-wrap gap-5">
+    {#each $someCards as card}
+        <div class="">
+            <p>{card.name}</p>
+            <img src="{card.img}" alt="" class="w-20">
+        </div>
+    {/each}
+</section>
 
 <style>
 * {
