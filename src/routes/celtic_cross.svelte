@@ -9,8 +9,8 @@ console.log($someCards)
 
 <section class="flex flex-wrap gap-5">
     {#each $someCards as card}
-        <div class="">
-            <p>{card.name}</p>
+        <div class="flex flex-col items-center">
+            <p class="flex items-center">{card.name}</p>
             <img src="{card.img}" alt="" class="w-20">
         </div>
     {/each}
