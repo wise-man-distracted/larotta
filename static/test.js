@@ -8,3 +8,5 @@ function arrayParaPotencia (array) {
 }
 
 console.log(arrayParaPotencia(numeros))
+
+console.log("teste")
